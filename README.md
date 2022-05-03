@@ -69,7 +69,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://data.slub-dresden.de*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -103,6 +103,3 @@ Class | Method | HTTP request | Description
 
 
 ## Author
-
-
-
