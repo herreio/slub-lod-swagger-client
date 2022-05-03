@@ -1,6 +1,6 @@
 # swagger_client.AuthoritySearchApi
 
-All URIs are relative to *https://localhost*
+All URIs are relative to *https://data.slub-dresden.de*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
