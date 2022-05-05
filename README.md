@@ -15,7 +15,7 @@ Python 2.7 and 3.4+
 ### pip install
 
 ```sh
-pip install git+https://github.com/herreio/slub-lod-swagger-client.git
+pip install -e git+https://github.com/herreio/slub-lod-swagger-client.git#egg=swagger_client
 ```
 
 Then import the package:
