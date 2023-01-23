@@ -25,7 +25,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.SearchAndAccessApi()
 id = 'id_example' # str | The ID-String of the record to access. Possible Values (examples):118695940, 130909696
-entity_type = 'entity_type_example' # str | The name of the entity-type to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo'].
+entity_type = 'entity_type_example' # str | The name of the entity-type to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources'].
 format = 'format_example' # str | set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json (optional)
 
 try:
@@ -40,7 +40,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID-String of the record to access. Possible Values (examples):118695940, 130909696 | 
- **entity_type** | **str**| The name of the entity-type to access. Allowed Values: [&#39;organizations&#39;, &#39;works&#39;, &#39;events&#39;, &#39;topics&#39;, &#39;persons&#39;, &#39;resources&#39;, &#39;geo&#39;]. | 
+ **entity_type** | **str**| The name of the entity-type to access. Allowed Values: [&#39;organizations&#39;, &#39;events&#39;, &#39;topics&#39;, &#39;persons&#39;, &#39;works&#39;, &#39;geo&#39;, &#39;resources&#39;]. | 
  **format** | **str**| set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json | [optional] 
 
 ### Return type
@@ -73,7 +73,7 @@ from pprint import pprint
 
 # create an instance of the API class
 api_instance = swagger_client.SearchAndAccessApi()
-entity_type = 'entity_type_example' # str | The name of the entity-type to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo'].
+entity_type = 'entity_type_example' # str | The name of the entity-type to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources'].
 q = 'q_example' # str | Lucene Query String Search Parameter (optional)
 format = 'format_example' # str | set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json (optional)
 size = 100 # int | Configure the maxmimum amount of hits to be returned (optional) (default to 100)
@@ -92,7 +92,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **entity_type** | **str**| The name of the entity-type to access. Allowed Values: [&#39;organizations&#39;, &#39;works&#39;, &#39;events&#39;, &#39;topics&#39;, &#39;persons&#39;, &#39;resources&#39;, &#39;geo&#39;]. | 
+ **entity_type** | **str**| The name of the entity-type to access. Allowed Values: [&#39;organizations&#39;, &#39;events&#39;, &#39;topics&#39;, &#39;persons&#39;, &#39;works&#39;, &#39;geo&#39;, &#39;resources&#39;]. | 
  **q** | **str**| Lucene Query String Search Parameter | [optional] 
  **format** | **str**| set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json | [optional] 
  **size** | **int**| Configure the maxmimum amount of hits to be returned | [optional] [default to 100]

@@ -43,7 +43,7 @@ class SourceApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the entity to access. (required)
-        :param str source_index: The name of the source-index to access the source-data.Allowed Values: ['kxp-de14', 'swb-aut', 'gnd_marc21'] (required)
+        :param str source_index: The name of the source-index to access the source-data.Allowed Values: ['swb-aut', 'gnd_marc21', 'kxp-de14'] (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -65,7 +65,7 @@ class SourceApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the entity to access. (required)
-        :param str source_index: The name of the source-index to access the source-data.Allowed Values: ['kxp-de14', 'swb-aut', 'gnd_marc21'] (required)
+        :param str source_index: The name of the source-index to access the source-data.Allowed Values: ['swb-aut', 'gnd_marc21', 'kxp-de14'] (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -123,8 +123,7 @@ class SourceApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/source/{source_index}/{id}'.format(
-              source_index=source_index, id=id), 'GET',
+            '/source/{source_index}/{id}', 'GET',
             path_params,
             query_params,
             header_params,

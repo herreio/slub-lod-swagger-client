@@ -23,7 +23,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.SourceApi()
 id = 'id_example' # str | The ID-String of the entity to access.
-source_index = 'source_index_example' # str | The name of the source-index to access the source-data.Allowed Values: ['kxp-de14', 'swb-aut', 'gnd_marc21']
+source_index = 'source_index_example' # str | The name of the source-index to access the source-data.Allowed Values: ['swb-aut', 'gnd_marc21', 'kxp-de14']
 
 try:
     api_instance.get_source_record_by_entity_and_entity_id(id, source_index)
@@ -36,7 +36,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID-String of the entity to access. | 
- **source_index** | **str**| The name of the source-index to access the source-data.Allowed Values: [&#39;kxp-de14&#39;, &#39;swb-aut&#39;, &#39;gnd_marc21&#39;] | 
+ **source_index** | **str**| The name of the source-index to access the source-data.Allowed Values: [&#39;swb-aut&#39;, &#39;gnd_marc21&#39;, &#39;kxp-de14&#39;] | 
 
 ### Return type
 

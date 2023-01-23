@@ -51,7 +51,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.AuthoritySearchApi(swagger_client.ApiClient(configuration))
 id = 'id_example' # str | The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819
-authority_provider = 'authority_provider_example' # str | The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd'].
+authority_provider = 'authority_provider_example' # str | The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc'].
 format = 'format_example' # str | set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json (optional)
 size = 100 # int | Configure the maxmimum amount of hits to be returned (optional) (default to 100)
 _from = 0 # int | Configure the offset from the frist result you want to fetch (optional) (default to 0)

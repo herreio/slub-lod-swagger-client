@@ -24,7 +24,7 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.AuthoritySearchApi()
 id = 'id_example' # str | The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819
-authority_provider = 'authority_provider_example' # str | The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd'].
+authority_provider = 'authority_provider_example' # str | The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc'].
 format = 'format_example' # str | set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json (optional)
 size = 100 # int | Configure the maxmimum amount of hits to be returned (optional) (default to 100)
 _from = 0 # int | Configure the offset from the frist result you want to fetch (optional) (default to 0)
@@ -41,7 +41,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819 | 
- **authority_provider** | **str**| The name of the authority-provider to access. Allowed Values: [&#39;isni&#39;, &#39;orcid&#39;, &#39;viaf&#39;, &#39;lc&#39;, &#39;filmportal.de&#39;, &#39;wd&#39;, &#39;swb&#39;, &#39;gnd&#39;]. | 
+ **authority_provider** | **str**| The name of the authority-provider to access. Allowed Values: [&#39;gnd&#39;, &#39;orcid&#39;, &#39;swb&#39;, &#39;isni&#39;, &#39;wd&#39;, &#39;filmportal.de&#39;, &#39;viaf&#39;, &#39;lc&#39;]. | 
  **format** | **str**| set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json | [optional] 
  **size** | **int**| Configure the maxmimum amount of hits to be returned | [optional] [default to 100]
  **_from** | **int**| Configure the offset from the frist result you want to fetch | [optional] [default to 0]
@@ -77,8 +77,8 @@ from pprint import pprint
 # create an instance of the API class
 api_instance = swagger_client.AuthoritySearchApi()
 id = 'id_example' # str | The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819
-entity_type = 'entity_type_example' # str | The name of the entity-index to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo'].
-authority_provider = 'authority_provider_example' # str | The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd'].
+entity_type = 'entity_type_example' # str | The name of the entity-index to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources'].
+authority_provider = 'authority_provider_example' # str | The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc'].
 format = 'format_example' # str | set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json (optional)
 size = 100 # int | Configure the maxmimum amount of hits to be returned (optional) (default to 100)
 _from = 0 # int | Configure the offset from the frist result you want to fetch (optional) (default to 0)
@@ -95,8 +95,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**| The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819 | 
- **entity_type** | **str**| The name of the entity-index to access. Allowed Values: [&#39;organizations&#39;, &#39;works&#39;, &#39;events&#39;, &#39;topics&#39;, &#39;persons&#39;, &#39;resources&#39;, &#39;geo&#39;]. | 
- **authority_provider** | **str**| The name of the authority-provider to access. Allowed Values: [&#39;isni&#39;, &#39;orcid&#39;, &#39;viaf&#39;, &#39;lc&#39;, &#39;filmportal.de&#39;, &#39;wd&#39;, &#39;swb&#39;, &#39;gnd&#39;]. | 
+ **entity_type** | **str**| The name of the entity-index to access. Allowed Values: [&#39;organizations&#39;, &#39;events&#39;, &#39;topics&#39;, &#39;persons&#39;, &#39;works&#39;, &#39;geo&#39;, &#39;resources&#39;]. | 
+ **authority_provider** | **str**| The name of the authority-provider to access. Allowed Values: [&#39;gnd&#39;, &#39;orcid&#39;, &#39;swb&#39;, &#39;isni&#39;, &#39;wd&#39;, &#39;filmportal.de&#39;, &#39;viaf&#39;, &#39;lc&#39;]. | 
  **format** | **str**| set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json | [optional] 
  **size** | **int**| Configure the maxmimum amount of hits to be returned | [optional] [default to 100]
  **_from** | **int**| Configure the offset from the frist result you want to fetch | [optional] [default to 0]
@@ -115,4 +115,3 @@ No authorization required
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-

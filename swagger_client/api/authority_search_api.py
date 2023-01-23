@@ -43,7 +43,7 @@ class AuthoritySearchApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819 (required)
-        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd']. (required)
+        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc']. (required)
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :param int size: Configure the maxmimum amount of hits to be returned
         :param int _from: Configure the offset from the frist result you want to fetch
@@ -68,7 +68,7 @@ class AuthoritySearchApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819 (required)
-        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd']. (required)
+        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc']. (required)
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :param int size: Configure the maxmimum amount of hits to be returned
         :param int _from: Configure the offset from the frist result you want to fetch
@@ -135,8 +135,7 @@ class AuthoritySearchApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/{authority_provider}/{id}'.format(
-              authority_provider=authority_provider, id=id), 'GET',
+            '/{authority_provider}/{id}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -161,8 +160,8 @@ class AuthoritySearchApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819 (required)
-        :param str entity_type: The name of the entity-index to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo']. (required)
-        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd']. (required)
+        :param str entity_type: The name of the entity-index to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources']. (required)
+        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc']. (required)
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :param int size: Configure the maxmimum amount of hits to be returned
         :param int _from: Configure the offset from the frist result you want to fetch
@@ -187,8 +186,8 @@ class AuthoritySearchApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the authority-identifier to access. Possible Values (examples): 208922695, 118695940, 20474817, Q1585819 (required)
-        :param str entity_type: The name of the entity-index to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo']. (required)
-        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['isni', 'orcid', 'viaf', 'lc', 'filmportal.de', 'wd', 'swb', 'gnd']. (required)
+        :param str entity_type: The name of the entity-index to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources']. (required)
+        :param str authority_provider: The name of the authority-provider to access. Allowed Values: ['gnd', 'orcid', 'swb', 'isni', 'wd', 'filmportal.de', 'viaf', 'lc']. (required)
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :param int size: Configure the maxmimum amount of hits to be returned
         :param int _from: Configure the offset from the frist result you want to fetch
@@ -261,9 +260,7 @@ class AuthoritySearchApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/{authority_provider}/{entity_type}/{id}'.format(
-              authority_provider=authority_provider,
-              entity_type=entity_type, id=id), 'GET',
+            '/{authority_provider}/{entity_type}/{id}', 'GET',
             path_params,
             query_params,
             header_params,

@@ -43,7 +43,7 @@ class SearchAndAccessApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the record to access. Possible Values (examples):118695940, 130909696 (required)
-        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo']. (required)
+        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources']. (required)
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :return: None
                  If the method is called asynchronously,
@@ -66,7 +66,7 @@ class SearchAndAccessApi(object):
 
         :param async_req bool
         :param str id: The ID-String of the record to access. Possible Values (examples):118695940, 130909696 (required)
-        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo']. (required)
+        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources']. (required)
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :return: None
                  If the method is called asynchronously,
@@ -127,8 +127,7 @@ class SearchAndAccessApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/{entity_type}/{id}'.format(
-              entity_type=entity_type, id=id), 'GET',
+            '/{entity_type}/{id}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -152,7 +151,7 @@ class SearchAndAccessApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo']. (required)
+        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources']. (required)
         :param str q: Lucene Query String Search Parameter
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :param int size: Configure the maxmimum amount of hits to be returned
@@ -179,7 +178,7 @@ class SearchAndAccessApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'works', 'events', 'topics', 'persons', 'resources', 'geo']. (required)
+        :param str entity_type: The name of the entity-type to access. Allowed Values: ['organizations', 'events', 'topics', 'persons', 'works', 'geo', 'resources']. (required)
         :param str q: Lucene Query String Search Parameter
         :param str format: set the Content-Type over this Query-Parameter. Allowed: nt, rdf, ttl, nq, jsonl, json
         :param int size: Configure the maxmimum amount of hits to be returned
@@ -249,8 +248,7 @@ class SearchAndAccessApi(object):
         auth_settings = []  # noqa: E501
 
         return self.api_client.call_api(
-            '/{entity_type}/search'.format(
-              entity_type=entity_type), 'GET',
+            '/{entity_type}/search', 'GET',
             path_params,
             query_params,
             header_params,
